@@ -5,8 +5,11 @@
   
   
     i)   Customer
+    
     ii)  Administrator
+    
     iii) Exit
+    
 2. If you choose Customer then press 1 and you will be redirected to store a Complaint. Fillout the form and press Enter.
 
 
