@@ -27,9 +27,9 @@ class complaint	//base class
 public:
 	void customer_StoreComplaint();
 	void admin_menu();
-    void create_complaint();
-    void cancel_complaint();
-    void update_complaint ();
+    	void create_complaint();
+    	void cancel_complaint();
+    	void update_complaint ();
 	void print_complaint();
 	void view_complaint();
 	void exit();
@@ -70,7 +70,7 @@ int main()	// Main function
 	do
 	{
 	cout<<"\n";
-    cout<<"\t\t ================================================\n";
+    	cout<<"\t\t ================================================\n";
 	cout<<"\t\t|   Complaint Management System - TRAVEL AGENCY |\n";
 	cout<<"\t\t ================================================\n\n\n";
 
@@ -84,7 +84,7 @@ int main()	// Main function
 	cout<<"\t\t|\t3. EXIT \t\t\t\t|\n";
 	cout<<"\t\t-------------------------------------------------\n\n";
 
-    cout<<"\t\tInput number Associated with Your User Type: ";
+    	cout<<"\t\tInput number Associated with Your User Type: ";
 	cin>>option;
 	switch(option)
 	{
@@ -106,11 +106,12 @@ int main()	// Main function
 		system ("PAUSE");
 
 }//end  main function
+
 void complaint::customer_StoreComplaint()		
 {
 	system("cls");
 	cout<<"\n";
-    cout<<"\t\t ================================================\n";
+    	cout<<"\t\t ================================================\n";
 	cout<<"\t\t|   Complaint Management System - TRAVEL AGENCY |\n";
 	cout<<"\t\t ================================================\n\n\n";
 	cout <<"\nAdd Your Complaint Details\n";
@@ -119,7 +120,7 @@ void complaint::customer_StoreComplaint()
 	node *temp;
 	temp = new node;
 	cout << "Type Complaint no: ";
-    cin >> temp->complaint_number;
+    	cin >> temp->complaint_number;
 	cout<< "Enter Your Name: ";
 	cin.ignore();
 	getline(cin, temp->customerName);
@@ -131,12 +132,12 @@ void complaint::customer_StoreComplaint()
 	getline(cin, temp->x);
 
 	cout<<"==========================================================================="<<endl;
-    cout << "Complaint added Successfully"<<endl;
-    cout<<"==========================================================================="<<endl;
+    	cout << "Complaint added Successfully"<<endl;
+    	cout<<"==========================================================================="<<endl;
     
 	system ("PAUSE");
 
-    temp->next=NULL;
+    	temp->next=NULL;
 	if(start_ptr!=NULL)
 	{
 		temp->next=start_ptr;
@@ -153,24 +154,24 @@ void complaint::admin_menu()
 
 	system("cls");
 	cout<<"\n";
-    cout<<"\t\t ===================================================\n";
+    	cout<<"\t\t ===================================================\n";
 	cout<<"\t\t|   Complaint Management System - TRAVEL AGENCY    |\n";
 	cout<<"\t\t ===================================================\n\n\n";
-    cout<<"\t\t----------------------------------------------------\n";
-    cout<<"\t\t\t  Administrator / Staff Login      \n";
-    cout<<"\t\t----------------------------------------------------\n\n";
-    cout << "\n\n\t\tPlease enter your user name: ";
-    cin >> userName;
-    cout << "\n\n\t\tPlease enter your user password: ";
-    cin >> userPassword;
+    	cout<<"\t\t----------------------------------------------------\n";
+    	cout<<"\t\t\t  Administrator / Staff Login      \n";
+    	cout<<"\t\t----------------------------------------------------\n\n";
+    	cout << "\n\n\t\tPlease enter your user name: ";
+    	cin >> userName;
+    	cout << "\n\n\t\tPlease enter your user password: ";
+    	cin >> userPassword;
 
-    if (userName == "Saif" && userPassword == "saif54398")
-    {
+    	if (userName == "Saif" && userPassword == "saif54398")
+    	{
     	do
-		{
-        system("cls");
-        cout<<"\n";
-        cout<<"\t\t ===================================================\n";
+	{
+        	system("cls");
+        	cout<<"\n";
+        	cout<<"\t\t ===================================================\n";
 		cout<<"\t\t|   Complaint Management System - TRAVEL AGENCY    |\n";
 		cout<<"\t\t ===================================================\n\n\n";
 		cout<<"\t\t--------------------------------------------------\n";
@@ -187,40 +188,40 @@ void complaint::admin_menu()
 
 		switch (menu)
 		{
-		case 1:
+			case 1:
 			{
 				admin.create_complaint();
 				break;
 			}
 
 
-		case 2:
+			case 2:
 			{
 				admin.view_complaint();
 				system("PAUSE");
 				break;
 			}
 
-		case 3:
+			case 3:
 			{
 				admin.update_complaint();
 				system("PAUSE");
 				break;
 			}
 
-		case 4:
+			case 4:
 			{
 				admin.print_complaint();
 				system("PAUSE");
 				break;
 			}
-		case 5:
+			case 5:
 			{
 				admin.cancel_complaint();
 				system("PAUSE");
 				break;
 			}
-        case 6:
+        		case 6:
 			{
 				cout<<"You are Logged Out...!\n\n\n\n";
 				system ("PAUSE");
@@ -250,7 +251,7 @@ void complaint::create_complaint()
 {
 	system("cls");
 	cout<<"\n";
-    cout<<"\t\t ================================================\n";
+    	cout<<"\t\t ================================================\n";
 	cout<<"\t\t|   Complaint Management System - TRAVEL AGENCY |\n";
 	cout<<"\t\t ================================================\n\n\n";
 	cout <<"\nAdd Complaint Details of Customer\n";
@@ -259,7 +260,7 @@ void complaint::create_complaint()
 	node *temp;
 	temp = new node;
 	cout << "Type Complaint no: ";
-    cin >> temp->complaint_number;
+    	cin >> temp->complaint_number;
 	cout<< "Enter Customer Name: ";
 	cin.ignore();
 	getline(cin, temp->customerName);
@@ -271,13 +272,13 @@ void complaint::create_complaint()
 	getline(cin, temp->x);
 
 	cout<<"==========================================================================="<<endl;
-    cout << "Complaint added Successfully"<<endl;
-    cout<<"==========================================================================="<<endl;
-    cout << "Go to Print Complaint to print the Complaint"<<endl;
-    cout<<"==========================================================================="<<endl;
+    	cout << "Complaint added Successfully"<<endl;
+    	cout<<"==========================================================================="<<endl;
+    	cout << "Go to Print Complaint to print the Complaint"<<endl;
+    	cout<<"==========================================================================="<<endl;
 	system ("PAUSE");
 
-    temp->next=NULL;
+    	temp->next=NULL;
 	if(start_ptr!=NULL)
 	{
 		temp->next=start_ptr;
@@ -297,7 +298,7 @@ void complaint::view_complaint()
 	temp=start_ptr;
 	found = false;
 	cout<<"\n";
-    cout<<"\t\t ================================================\n";
+    	cout<<"\t\t ================================================\n";
 	cout<<"\t\t|   Complaint Management System - TRAVEL AGENCY |\n";
 	cout<<"\t\t ================================================\n\n\n";
 	cout<<" Enter the Complaint Number To Look into The Complaint Details\n";
@@ -351,12 +352,12 @@ void complaint::cancel_complaint()
 	system("cls");
 	int num, count;
 	cout<<"\n";
-    cout<<"\t\t ================================================\n";
+    	cout<<"\t\t ================================================\n";
 	cout<<"\t\t|   Complaint Management System - TRAVEL AGENCY |\n";
 	cout<<"\t\t ================================================\n\n\n";
-    cout<<"Enter the Complaint number you want to delete \n";
-    cin>>num;
-    node *q;
+    	cout<<"Enter the Complaint number you want to delete \n";
+    	cin>>num;
+    	node *q;
 	node *temp;
 	bool found;
 
@@ -440,7 +441,7 @@ void complaint::update_complaint()
     if (found)
     {
 	cout << "Change  Complaint Number: ";
-    cin >> temp->complaint_number;
+    	cin >> temp->complaint_number;
 	cout<< "Change Customer Name: ";
 	cin.ignore();
 	getline(cin, temp->customerName);
